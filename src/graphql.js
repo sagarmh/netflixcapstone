@@ -46,32 +46,24 @@ export const EDIT_USER_MUTATION = gql`
 
 export const SIGNUP_MUTATION = gql`
   mutation SignupMutation(
-        $email: String!
-        $password: String!
-        $name: String!
-    ) {
-        signup(
-            email: $email
-            password: $password
-            name: $name
-        ) {
-            token
-        }
+    $emailId: String!
+    $password: String!
+    $name: String!
+  ) {
+    signup(emailId: $emailId, password: $password, name: $name) {
+      id
+      name
+      emailId
+      password
     }
+  }
 `;
 
 export const LOGIN_MUTATION = gql`
-  mutation SignupMutation(
-        $email: String!
-        $password: String!
-        $name: String!
-    ) {
-        signup(
-            email: $email
-            password: $password
-            name: $name
-        ) {
-            token
-        }
+  mutation LoginMutation($emailId: String, $password: String) {
+    login(emailId: $emailId, password: $password) {
+      emailId
+      password
     }
+  }
 `;

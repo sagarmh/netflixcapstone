@@ -39,7 +39,7 @@
     padding:5px 15px;
 }
 
-.signupScreen>form>button{
+.signupScreen form button{
     padding:16px 20px;
     font-size: 1rem;
     color :#fff;
@@ -49,7 +49,8 @@
     border:none;
     cursor: pointer;
     margin-top: 20px;
-    
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .signupScreen__link:hover{
